@@ -1,9 +1,10 @@
 
 
-function personalVirus(myName, yourName){
-
-  console.log("Your machine is infected, " + myName + "!!!");
-  console.log("Your machine is infected, " + yourName + "!!!");
+function yourName(firstName, lastName){
+  var myName = "Jen"
+  return firstName + " " + lastName;
 }
 
-personalVirus("Jen", "Steve");
+console.log(myName)
+var user1 = yourName("Jen", "Shannon");
+var user2 = yourName("Steve", "VanWoerkom")

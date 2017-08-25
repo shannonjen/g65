@@ -1,5 +1,20 @@
-setInterval(function(){alert("HI")}, 3000)
+// var annoy = function(){
+//   var now = new Date();
+//   console.log(now);
+// }
+//
+// setInterval(annoy, 1000);
 
+// accepts a function as an argument
+var func = function() {
+    console.log("Hi Mom!")
+}
+
+function higherOrder(done) {
+  done();
+}
+
+higherOrder(func);
 
 
 

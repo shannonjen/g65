@@ -37,13 +37,15 @@
 //
 
 
+
 var a = 'outer';
 
 function myFunction() {
-  a = 'inner';
+  var a = 'inner';
   console.log(a); // ???
 }
 
 myFunction();
 
 console.log(a); // ???
+console.log(c);

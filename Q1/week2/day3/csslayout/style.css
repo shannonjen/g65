@@ -1,0 +1,37 @@
+#col1{
+  width: 60%;
+  /*background-color: red;*/
+  float: left;
+
+}
+
+#col2 {
+  width: 40%;
+  /*background-color: yellow;*/
+  float: left;
+}
+
+footer {
+  /*background-color: green;*/
+  clear: both;
+}
+
+header {
+  /*background-color: purple;*/
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+li {
+  display: inline-block;
+  padding-right: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+
+}

@@ -1,10 +1,37 @@
-var el = document.querySelector('button');
 
+par1 = document.querySelectorAll('p');
 
-el.addEventListener('click', function(event){
+par1.addEventListener("click", function(event){
   console.log(event.target.textContent);
-  alert("You clicked me!");
 })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// var el = document.querySelector('button');
+//
+//
+// el.addEventListener('click', function(event){
+//   console.log(event.target.textContent);
+//   alert("You clicked me!");
+// })
 
 
 // document.querySelector('body').addEventListener('click', function(){

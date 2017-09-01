@@ -1,8 +1,18 @@
 
-par1 = document.querySelectorAll('p');
+var p1 = document.querySelector('#par1');
+var p2 = document.querySelector('#par2');
+var p3 = document.querySelector('#par3');
 
-par1.addEventListener("click", function(event){
-  console.log(event.target.textContent);
+p1.addEventListener('click', function(){
+  console.log("You have clicked par1")
+})
+
+p2.addEventListener('click', function(){
+  console.log("You have clicked par2")
+})
+
+p3.addEventListener('click', function(){
+  console.log("You have clicked par3")
 })
 
 

@@ -1,6 +1,6 @@
 document.querySelector('.red').addEventListener("click", function(){
   //change the background color of the body
-  document.querySelector('body').style.backgroundColor = "red";
+  document.querySelector('body').classList.toggle('red');
 })
 
 document.querySelector('.blue').addEventListener("click", function(){

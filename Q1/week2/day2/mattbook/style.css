@@ -25,5 +25,7 @@
 footer {
   height: 40px;
   padding: 10px;
+  clear: left;
+
 
 }

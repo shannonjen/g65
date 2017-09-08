@@ -3,7 +3,10 @@ var request = new XMLHttpRequest();
 request.onreadystatechange = function() {
   if(request.readyState == 4 && request.status == 200){
     var response = JSON.parse(request.responseText)
-    console.log(response.data.children[0].data.title);
+    var childrenArray = response.data.children
+    for(var i=0; i< childrenArray.length; i++){
+      console.log(childrenArray[i].data.title);
+    }
   }
 }
 

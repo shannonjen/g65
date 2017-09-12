@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Google Maps API Example</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div id="mapGoesHere">
+
+    </div>
+
+    <script>
+      function initMap(){
+        var students = [{
+          name: "jen",
+          lat: 40.681432,
+          lng: -73.994959
+        }, {
+          name: "surbhi",
+          lat: 40.718106,
+          lng: -73.844847
+        }]
+
+
+        var map = new google.maps.Map(document.querySelector('#mapGoesHere'), {
+          zoom: 12,
+          center: {lat: 40.7264,lng: -74.0078}
+        });
+
+        for (var i = 0; i< students.length; i++) {
+          var marker = new google.maps.Marker({
+            position: {lat: students[i].lat, lng: students[i].lng},
+            map: map
+          });
+        }
+
+        // var marker = new google.maps.Marker({
+        //   position: {lat: 40.7333, lng: -73.9908},
+        //   map: map
+        // });
+        // var jen = new google.maps.Marker({
+        //   position: {lat: 40.681432, lng: -73.994959},
+        //   map: map
+        // });
+        // var surbhi = new google.maps.Marker({
+        //   position: {lat: 40.718106, lng: -73.844847},
+        //   map: map
+        // });
+        // var steph = new google.maps.Marker({
+        //   position: {lat: 40.69079, lng: -73.92737},
+        //   map: map
+        // });
+        // var ricky = new google.maps.Marker({
+        //   position: {lat: 40.742888, lng: -73.7921747},
+        //   map: map
+        // });
+
+      }
+    </script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCU2tJwQmbWiQ-7WLhKnkF0668iTmYkvIk&callback=initMap">
+        </script>
+  </body>
+</html>

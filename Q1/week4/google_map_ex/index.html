@@ -7,8 +7,8 @@
   </head>
   <body>
     <form>
-      <input type="text" id="lat">
-      <input type="text" id="lng">
+      <input type="text" placeholder="lat" id="lat">
+      <input type="text" placeholder="lng" id="lng">
       <input type="submit">
     </form>
     <div id="mapGoesHere">
@@ -17,35 +17,42 @@
 
     <script>
 
-      document.querySelector("form").addEventListener("submit", function(event){
-        event.preventDefault();
-        var lat = document.querySelector('#lat').value;
-        var lng = document.querySelector('#lng').value;
-        console.log("Lat: "+lat+ " Lng: "+lng)
-      })
+
       function initMap(){
-        var students = [{
-          name: "jen",
-          lat: 40.681432,
-          lng: -73.994959
-        }, {
-          name: "surbhi",
-          lat: 40.718106,
-          lng: -73.844847
-        }]
+        document.querySelector("form").addEventListener("submit", function(event){
+          event.preventDefault();
 
-
+          var lat = parseFloat(document.querySelector('#lat').value);
+          var lng = parseFloat(document.querySelector('#lng').value);
+          var marker = new google.maps.Marker({
+              position: {lat: lat, lng: lng},
+              map: map
+            });
+          console.log("Lat: "+lat+ " Lng: "+lng)
+        })
         var map = new google.maps.Map(document.querySelector('#mapGoesHere'), {
           zoom: 12,
           center: {lat: 40.7264,lng: -74.0078}
         });
+        // var students = [{
+        //   name: "jen",
+        //   lat: 40.681432,
+        //   lng: -73.994959
+        // }, {
+        //   name: "surbhi",
+        //   lat: 40.718106,
+        //   lng: -73.844847
+        // }]
 
-        for (var i = 0; i< students.length; i++) {
-          var marker = new google.maps.Marker({
-            position: {lat: students[i].lat, lng: students[i].lng},
-            map: map
-          });
-        }
+
+
+
+        // for (var i = 0; i< students.length; i++) {
+        //   var marker = new google.maps.Marker({
+        //     position: {lat: students[i].lat, lng: students[i].lng},
+        //     map: map
+        //   });
+        // }
 
         // var marker = new google.maps.Marker({
         //   position: {lat: 40.7333, lng: -73.9908},

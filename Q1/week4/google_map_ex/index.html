@@ -6,11 +6,23 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
+    <form>
+      <input type="text" id="lat">
+      <input type="text" id="lng">
+      <input type="submit">
+    </form>
     <div id="mapGoesHere">
 
     </div>
 
     <script>
+
+      document.querySelector("form").addEventListener("submit", function(event){
+        event.preventDefault();
+        var lat = document.querySelector('#lat').value;
+        var lng = document.querySelector('#lng').value;
+        console.log("Lat: "+lat+ " Lng: "+lng)
+      })
       function initMap(){
         var students = [{
           name: "jen",

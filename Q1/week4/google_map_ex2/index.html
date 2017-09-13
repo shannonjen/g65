@@ -16,20 +16,28 @@
     </div>
     <script>
       function initMap(){
-
+        var marker;
         document.querySelector("form").addEventListener("submit", function(event){
           event.preventDefault();
+          console.log("Marker outside of if statement" +marker);
+          if(marker){
+            console.log("Marker before null set: " +Object.keys(marker));
+            marker.setMap(null);
+            console.log("Marker after null set: " + Object.keys(marker));
+          }
           var lat = parseFloat(document.querySelector("#lat").value);
           var lng = parseFloat(document.querySelector("#lng").value);
 
-          var marker = new google.maps.Marker({
+          marker = new google.maps.Marker({
             position: {lat: lat, lng: lng},
             map: map
           })
 
+
         })
+
         var map = new google.maps.Map(document.querySelector("#mapGoesHere"), {
-          zoom: 14,
+          zoom: 10,
           center: {lat: 40.726388, lng: -74.007792}
         })
 

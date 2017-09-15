@@ -1,0 +1,13 @@
+{
+  "peeps": [{
+    "firstName": "Josh",
+    "favFood": "Coffee Pudding"
+  },{
+    "firstName": "Matt",
+    "favFood": "Birds"
+  },{
+    "firstName": "Romeo",
+    "favFood": "Salad"
+  }
+  ]
+}
